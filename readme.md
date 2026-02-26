@@ -170,7 +170,7 @@ traffic-router/
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/traffic-router.git
+git clone https://github.com/minjaezekiel/traffic-router.git
 cd traffic-router
 ````
 
