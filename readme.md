@@ -1,18 +1,3 @@
-Here is your **professional GitHub-grade `README.md`** with:
-
-* Badges
-* Clean structure
-* Architecture diagrams (ASCII)
-* PNG diagram reference (you can generate/export later)
-* Production-style documentation
-* Contribution guidelines
-* Roadmap
-* Engineering depth
-
-You can paste this directly into your `README.md`.
-
----
-
 ```markdown
 #  AI Traffic Router
 ### Intelligent Traffic-Aware Routing Engine using A* Search
