@@ -1,4 +1,3 @@
-```markdown
 #  AI Traffic Router
 ### Intelligent Traffic-Aware Routing Engine using A* Search
 
@@ -40,11 +39,9 @@ Represents:
 ###  A* Search Algorithm
 Uses:
 
-```
 
 f(n) = g(n) + h(n)
 
-```
 
 Where:
 - g(n) → actual cost from start
@@ -71,9 +68,6 @@ When traffic increases:
 
 ##  High-Level Architecture
 
-```
-
-```
             +------------------+
             |   Client (App)   |
             +------------------+
@@ -95,15 +89,11 @@ When traffic increases:
                     +-------------+
                     |   Graph     |
                     +-------------+
-```
-
-```
 
 ---
 
 ##  Internal A* Flow
 
-```
 
 Start Node
 |
@@ -128,13 +118,11 @@ Update g(n), f(n)
 v
 Goal Found? → Yes → Reconstruct Path
 
-```
 
 ---
 
 ##  Modular Project Structure
 
-```
 
 traffic-router/
 │
@@ -143,25 +131,24 @@ traffic-router/
 ├── package.json
 │
 ├── src/
-│   ├── core/
-│   │   ├── Graph.js
-│   │   ├── AStar.js
-│   │
-│   ├── traffic/
-│   │   ├── TrafficAnalyzer.js
-│   │
-│   ├── services/
-│   │   ├── RouteService.js
-│   │
-│   ├── sockets/
-│   │   ├── socketServer.js
+│ ├── core/
+│ │ ├── Graph.js
+│ │ ├── AStar.js
+│ │
+│ ├── traffic/
+│ │ ├── TrafficAnalyzer.js
+│ │
+│ ├── services/
+│ │ ├── RouteService.js
+│ │
+│ ├── sockets/
+│ │ ├── socketServer.js
 │
-├── **tests**/
-│   ├── astar.test.js
+├── tests/
+│ ├── astar.test.js
 │
 └── README.md
 
-````
 
 ---
 
@@ -170,51 +157,35 @@ traffic-router/
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/minjaezekiel/traffic-router.git
-cd traffic-router
-````
-
-## Install Dependencies
-
-```bash
+git clone https://github.com/your-username/ai-traffic-router.git
+cd ai-traffic-router
+Install Dependencies
 npm install
-```
-
-## Run the Server
-
-```bash
+Run the Server
 node server.js
-```
 
 Server runs at:
 
-```
 http://localhost:3000
-```
-
----
-
-# 🧪 Running Tests
-
-```bash
+🧪 Running Tests
 npm test
-```
 
 The test suite validates:
 
-* Shortest path correctness
-* Congestion penalty behavior
-* Circular graph handling
-* Disconnected nodes
-* Dynamic updates
+Shortest path correctness
 
----
+Congestion penalty behavior
 
-# 🌐 Using with Express
+Circular graph handling
+
+Disconnected nodes
+
+Dynamic updates
+
+ Using with Express
 
 Example Express Integration:
 
-```javascript
 import express from "express";
 import { Graph } from "./src/core/Graph.js";
 import { AStar } from "./src/core/AStar.js";
@@ -243,141 +214,149 @@ app.get("/route", (req, res) => {
 app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
-```
-
----
-
-# 🔌 Real-Time Traffic (WebSocket)
-
-```javascript
+🔌 Real-Time Traffic (WebSocket)
 import { startSocketServer } from "./src/sockets/socketServer.js";
 
 startSocketServer(3001);
-```
 
 Clients can:
 
-* Send GPS coordinates
-* Update congestion zones
-* Receive recalculated routes
+Send GPS coordinates
 
----
+Update congestion zones
 
-#  Current Significance
+Receive recalculated routes
+
+📈 Current Significance
 
 This project demonstrates:
 
-* Practical AI Search (A*)
-* Heuristic optimization
-* Dynamic decision systems
-* Smart city infrastructure modeling
-* Real-time traffic adaptation
-* Modular backend AI architecture
+Practical AI Search (A*)
+
+Heuristic optimization
+
+Dynamic decision systems
+
+Smart city infrastructure modeling
+
+Real-time traffic adaptation
+
+Modular backend AI architecture
 
 It is applicable in:
 
-* Ride-sharing platforms
-* Logistics optimization
-* Delivery systems
-* Emergency response routing
-* Smart urban planning
+Ride-sharing platforms
 
----
+Logistics optimization
 
-#  Current Limitations
+Delivery systems
 
-1. Uses Euclidean distance (not real road network)
-2. No OpenStreetMap / Google Maps integration
-3. No advanced clustering algorithm (DBSCAN not implemented yet)
-4. No spatial indexing (not optimized for millions of nodes)
-5. No distributed scaling
-6. No caching layer
+Emergency response routing
 
----
+Smart urban planning
 
-# Roadmap
+⚠ Current Limitations
 
-* [ ] Implement Haversine formula
-* [ ] Integrate OpenStreetMap data
-* [ ] Add DBSCAN congestion detection
-* [ ] Add Redis caching
-* [ ] Add Docker support
-* [ ] Add CI/CD pipeline
-* [ ] Convert to microservice architecture
-* [ ] Add visualization dashboard
+Uses Euclidean distance (not real road network)
 
----
+No OpenStreetMap / Google Maps integration
 
-#  Contributing
+No advanced clustering algorithm (DBSCAN not implemented yet)
+
+No spatial indexing (not optimized for millions of nodes)
+
+No distributed scaling
+
+No caching layer
+
+🛣 Roadmap
+
+ Implement Haversine formula
+
+ Integrate OpenStreetMap data
+
+ Add DBSCAN congestion detection
+
+ Add Redis caching
+
+ Add Docker support
+
+ Add CI/CD pipeline
+
+ Convert to microservice architecture
+
+ Add visualization dashboard
+
+ Contributing
 
 We welcome contributors.
 
-## How to Contribute
+How to Contribute
 
-1. Fork the repository
-2. Create a branch
+Fork the repository
 
-```bash
+Create a branch
+
 git checkout -b feature/your-feature
-```
 
-3. Commit your changes
-4. Push
-5. Create Pull Request
+Commit your changes
 
-## Contribution Areas
+Push
 
-* Improve A* performance
-* Implement priority queue optimization
-* Add Dijkstra / Bidirectional Search
-* Improve test coverage
-* Add performance benchmarking
-* Add large-scale graph support
+Create Pull Request
 
----
+Contribution Areas
 
-#  Performance Considerations
+Improve A* performance
+
+Implement priority queue optimization
+
+Add Dijkstra / Bidirectional Search
+
+Improve test coverage
+
+Add performance benchmarking
+
+Add large-scale graph support
+
+ Performance Considerations
 
 Current Complexity:
 
-* Time: O(E log V)
-* Space: O(V)
+Time: O(E log V)
+
+Space: O(V)
 
 Future optimization:
 
-* Binary heap / Fibonacci heap
-* Spatial indexing (R-Tree)
-* Parallel graph processing
+Binary heap / Fibonacci heap
 
----
+Spatial indexing (R-Tree)
 
-#  Educational Value
+Parallel graph processing
+
+📚 Educational Value
 
 Great for learning:
 
-* AI search algorithms
-* Heuristic optimization
-* Backend modular architecture
-* Real-time systems design
-* Traffic modeling concepts
+AI search algorithms
 
----
+Heuristic optimization
 
-# 🧑‍💻 Author
+Backend modular architecture
+
+Real-time systems design
+
+Traffic modeling concepts
+
+ Author
 
 Developed as an AI routing demonstration project.
 
----
-
-# 📄 License
+ License
 
 MIT License
 
----
-
-#  Vision
+ Vision
 
 To evolve into a scalable, real-time, AI-powered smart traffic routing infrastructure capable of supporting modern urban mobility systems.
-
-
-
